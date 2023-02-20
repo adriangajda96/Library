@@ -7,13 +7,17 @@ public class Book {
     String publisher;
     String isbn;
 
-    Book(String bookTitle, String bookAuthor, int bookRelease, int bookPages, String bookPublisher, String bookIsbn) {
-        title = bookTitle;
-        author = bookAuthor;
-        releaseYear = bookRelease;
-        pages = bookPages;
-        publisher = bookPublisher;
-        isbn = bookIsbn;
+    Book(String title, String author, int releaseYear, int pages, String publisher, String isbn) {
+        this(title, author, releaseYear, pages, publisher);
+        this.isbn = isbn;
+    }
+
+    Book(String title, String author, int releaseYear, int pages, String publisher) {
+        this.title = title;
+        this.author = author;
+        this.releaseYear = releaseYear;
+        this.pages = pages;
+        this.publisher = publisher;
     }
 
     void printInfo() {
